@@ -1,0 +1,411 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: white; 
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+    text-decoration: none;
+}
+.drawer {
+    position: fixed;
+    top: 0;
+    right: -300px; /* hidden off screen */
+    width: 300px;
+    height: 100vh;
+    background-color: #fff;
+    color: #333;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    box-shadow: -2px 0 8px rgba(0,0,0,0.15);
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+
+  /* Drawer open */
+  .drawer.open {
+    right: 0;
+  }
+
+  /* Drawer links */
+  .drawer ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 120px;
+  }
+  .drawer ul li {
+    margin: 20px 0;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+  }
+  .drawer ul li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .drawer ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 28px;
+    display: block;
+  }
+  .drawer ul li a:hover {
+    
+  }
+
+  /* Overlay when drawer is open */
+  .overlay1 {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 300vh;
+    background: rgba(0,0,0,0.4);
+    z-index: 999;
+  }
+  .overlay1.active {
+    display: block;
+  }
+@font-face {
+    font-family: 'Metropolis';
+    src: url('/static/Metropolis-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'delmon';
+    src: url('/static/Delmon.otf') format('truetype'); /* TTF format */
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'typo';
+    src: url('/static/typo.otf') format('truetype'); /* TTF format */
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'helvetica';
+    src: url('/static/Helvetica.otf') format('truetype'); /* TTF format */
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'roboto';
+    src: url('/static/Roboto-Black.ttf') format('truetype'); /* TTF format */
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'lato';
+    src: url('/static/Lato-Black.ttf') format('truetype'); /* TTF format */
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'gon';
+    src: url('/static/Gontserrat-Black.ttf') format('truetype'); /* TTF format */
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Bold';
+    src: url('/static/bold.ttf') format('truetype'); /* TTF format */
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Artines';
+    src: url('/static/Arthines.otf') format('truetype'); /* TTF format */
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'chico';
+    src: url('/static/Chicharito.ttf') format('truetype'); /* TTF format */
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Calton';
+    src: url('/static/Caltons.otf') format('truetype'); /* TTF format */
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Discount Banner */
+.discount-banner {
+    background-color:#a8b8d0;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.banner-message {
+    display: none;
+}
+
+/* Header */
+.header {
+    position: absolute; /* Position it relative to the viewport */
+    
+    width: 100%; /* Make it span the full width of the page */
+    z-index: 1000; /* Ensure it's above the background image */
+    background-color: transparent; /* Keep it transparent */
+    padding: 15px 0;
+    color: #fff83e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.header .logo img {
+    height: 120px;
+    margin-left: 80px;
+    transform: scale(2);
+    filter: brightness(0) invert(1);
+    /* ensures image/logo turns white */
+}
+
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 22px;
+    position: relative;
+    top: -15px; /* Move navbar further up */
+}
+
+.navbar li {
+    display: flex;
+    align-items: center;
+}
+
+/* Vertical line */
+.divider {
+    width: 1px;
+    height: 54px;
+    background-color: #ccc;
+    margin-left: 18px;
+    margin-right: 18px;
+    position: relative;
+    top: -14px; /* Move divider further up */
+}
+
+/* Phone icon */
+.navbar a {
+    color: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    position: relative;
+    top: -13px; /* Move navbar links further up */
+}
+
+/* Booking button */
+.booking-btn {
+    padding: 8px 16px;
+    background-color: #0097b2; /* your theme color */
+    color: #fff;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background 0.3s;
+    position: relative;
+    top: -13px; /* Move booking button further up */
+}
+
+
+/* Icons */
+.icons a {
+    margin-left: 20px;
+    color: #333;
+    margin-right: 20px;
+    font-size: 30px;
+    transition: color 0.3s;
+    position: relative;
+    top: -16px; /* Move header icons further up */
+}
+
+.icons a:hover {
+    color: #ff4081;
+}
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        flex-direction: column;
+        display: none;
+        gap: 20px;
+        padding: 20px;
+        z-index: 999;
+    }
+
+    .navbar.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+.site-footer {
+    background: #121212;
+    color: #fff;
+    padding: 80px 60px;
+    font-family: "Georgia", serif;
+  }
+  
+  .footer-container {
+    max-width: 1400px;
+    margin: auto;
+  }
+  
+  /* Newsletter */
+  .footer-newsletter h2 {
+    font-style: italic;
+    font-size: 42px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-newsletter p {
+    max-width: 500px;
+    line-height: 1.6;
+    color: #ccc;
+  }
+  
+  .newsletter-form {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+  }
+  
+  .newsletter-form input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #aaa;
+    padding: 10px;
+    color: #fff;
+    width: 200px;
+  }
+  
+  .newsletter-form input:focus {
+    outline: none;
+    border-color: black;
+  }
+  
+  .newsletter-form button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-style: italic;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .privacy {
+    display: block;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #aaa;
+  }
+  
+  .privacy a {
+    color: #fff;
+    text-decoration: underline;
+  }
+  
+  /* Links */
+  .footer-links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px;
+    margin-top: 80px;
+  }
+  
+  .footer-links h4 {
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    color: #aaa;
+  }
+  
+  .footer-links a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px;
+  }
+  
+  .footer-links p {
+    margin: 5px 0;
+    color: #ccc;
+  }
+  
+  /* Social */
+  .footer-social {
+    margin-top: 60px;
+    display: flex;
+    gap: 40px;
+    font-style: italic;
+  }
+  
+  .footer-social a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .newsletter-form {
+      flex-direction: column;
+    }
+  
+    .footer-links {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .footer-links {
+      grid-template-columns: 1fr;
+    }
+  }
+  

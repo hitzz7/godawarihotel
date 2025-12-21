@@ -6,10 +6,7 @@
 {% block content %}
 <div class="bg-image">
     
-        <video autoplay loop muted playsinline>
-            <source src="{% static 'forest.mp4' %}" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+        <img src="{% static 'pool.jpg' %}" alt="Pool">
         
     
     <div class="text-overlay">
@@ -20,7 +17,7 @@
         </div>
         <h1>Godawari Forest Hotel</h1>
         <p>Your goto Escape Destination</p>
-        <!-- <form class="hotel-booking-form" id="bookingForm">
+        <form class="hotel-booking-form" id="bookingForm">
             <div class="form-row">
                 <label for="roomType">Room</label>
                 <select id="roomType" name="roomType" required>
@@ -53,7 +50,7 @@
                   <option value="5">5</option>
               </select>
           </div>
-            <button class="booking-btn">Book Now</button> -->
+            <button class="booking-btn">Book Now</button>
         
 
         
@@ -97,7 +94,7 @@
 
         <div class="carousel-track" id="carouselTrack">
             <div class="card">
-                <img src="{% static 'r4.jpg' %}"lo ading="lazy" alt="Sign 1">
+                <img src="{% static 'r4.jpg' %}"loading="lazy" alt="Sign 1">
                 <div class="overlay">Standard Room</div>
             </div>
             <div class="card">
@@ -112,6 +109,18 @@
                 <img src="{% static 'r1.jpg' %}" loading="lazy" alt="Sign 2">
                 <div class="overlay">Master Room</div>
             </div>
+            <div class="card">
+              <img src="{% static 'r3.jpg' %}" loading="lazy" alt="Sign 2">
+              <div class="overlay">Delux Room</div>
+          </div>
+          <div class="card">
+              <img src="{% static 'r2.jpg' %}" loading="lazy" alt="Sign 2">
+              <div class="overlay">Suits</div>
+          </div>
+          <div class="card">
+              <img src="{% static 'r1.jpg' %}" loading="lazy" alt="Sign 2">
+              <div class="overlay">Master Room</div>
+          </div>
             
             
             <!-- Add more cards as needed -->
