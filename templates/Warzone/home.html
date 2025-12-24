@@ -6,7 +6,7 @@
 {% block content %}
 <div class="bg-image">
     
-        <img src="{% static 'pool.jpg' %}" alt="Pool">
+        <img src="{% static 'pool.jpg' %}" alt="Pool" fetchpriority="high" loading="eager" decoding="async">
         
     
     <div class="text-overlay">
@@ -73,8 +73,8 @@
 
   <section class="center-section">
     <!-- Monstera Images -->
-    <img src="{% static 'mon1.jpg' %}" alt="Monstera Plant" class="plant-img left-plant">
-    <img src="{% static 'mon1.jpg' %}" alt="Monstera Plant" class="plant-img right-plant">
+    <img src="{% static 'mon1.jpg' %}" alt="Monstera Plant" class="plant-img left-plant" loading="lazy" decoding="async">
+    <img src="{% static 'mon1.jpg' %}" alt="Monstera Plant" class="plant-img right-plant" loading="lazy" decoding="async">
 
     <div class="center-content">
         <h1>Book Your Stay With Confidence</h1>
@@ -94,31 +94,31 @@
 
         <div class="carousel-track" id="carouselTrack">
             <div class="card">
-                <img src="{% static 'r4.jpg' %}"loading="lazy" alt="Sign 1">
+                <img src="{% static 'r4.jpg' %}" loading="lazy" decoding="async" alt="Sign 1">
                 <div class="overlay">Standard Room</div>
             </div>
             <div class="card">
-                <img src="{% static 'r3.jpg' %}" loading="lazy" alt="Sign 2">
+                <img src="{% static 'r3.jpg' %}" loading="lazy" decoding="async" alt="Sign 2">
                 <div class="overlay">Delux Room</div>
             </div>
             <div class="card">
-                <img src="{% static 'r2.jpg' %}" loading="lazy" alt="Sign 2">
+                <img src="{% static 'r2.jpg' %}" loading="lazy" decoding="async" alt="Sign 2">
                 <div class="overlay">Suits</div>
             </div>
             <div class="card">
-                <img src="{% static 'r1.jpg' %}" loading="lazy" alt="Sign 2">
+                <img src="{% static 'r1.jpg' %}" loading="lazy" decoding="async" alt="Sign 2">
                 <div class="overlay">Master Room</div>
             </div>
             <div class="card">
-              <img src="{% static 'r3.jpg' %}" loading="lazy" alt="Sign 2">
+              <img src="{% static 'r3.jpg' %}" loading="lazy" decoding="async" alt="Sign 2">
               <div class="overlay">Delux Room</div>
           </div>
           <div class="card">
-              <img src="{% static 'r2.jpg' %}" loading="lazy" alt="Sign 2">
+              <img src="{% static 'r2.jpg' %}" loading="lazy" decoding="async" alt="Sign 2">
               <div class="overlay">Suits</div>
           </div>
           <div class="card">
-              <img src="{% static 'r1.jpg' %}" loading="lazy" alt="Sign 2">
+              <img src="{% static 'r1.jpg' %}" loading="lazy" decoding="async" alt="Sign 2">
               <div class="overlay">Master Room</div>
           </div>
             
@@ -131,7 +131,7 @@
 </section>
 <section class="features-section">
     <div class="feature">
-      <img src="{% static 'sun.png' %}"  loading="lazy" alt="Swimming Pool">
+      <img src="{% static 'sun.png' %}"  loading="lazy" decoding="async" alt="Swimming Pool">
       <div class="text">
         <h3>Swimming Pool</h3>
         <p>Relax and unwind in our luxurious swimming pool, perfect for leisure and exercise.</p>
@@ -139,7 +139,7 @@
     </div>
   
     <div class="feature">
-      <img src="{% static 'cocktail.png' %}" alt="Bar">
+      <img src="{% static 'cocktail.png' %}" loading="lazy" decoding="async" alt="Bar">
       <div class="text">
         <h3>Bar</h3>
         <p>Enjoy refreshing cocktails and a wide selection of drinks at our vibrant bar.</p>
@@ -147,7 +147,7 @@
     </div>
   
     <div class="feature">
-      <img src="{% static 'muscle.png' %}" alt="Gym">
+      <img src="{% static 'muscle.png' %}" loading="lazy" decoding="async" alt="Gym">
       <div class="text">
         <h3>Gym</h3>
         <p>Stay fit during your stay with access to our fully equipped modern gym.</p>
@@ -155,7 +155,7 @@
     </div>
   
     <div class="feature">
-      <img src="{% static 'treatment.png' %}" alt="Massage">
+      <img src="{% static 'treatment.png' %}" loading="lazy" decoding="async" alt="Massage">
       <div class="text">
         <h3>Massage</h3>
         <p>Indulge in soothing massages by our expert therapists for a truly relaxing experience.</p>
@@ -177,34 +177,34 @@
   <div class="gallery-wrapper">
     <div class="card-wrapper">
       <div class="card-1">
-        <img src="{% static 'pool.jpg' %}" loading="lazy"  alt="2D Acrylic Sign">
+        <img src="{% static 'pool.jpg' %}" loading="lazy" decoding="async" alt="2D Acrylic Sign">
       </div>
       <p class="card-title">pool</p>
     </div>
     
     <div class="card-wrapper">
       <div class="card-1">
-        <img src="{% static 'spa.jpg' %}" loading="lazy"  alt="3D LED Sign">
+        <img src="{% static 'spa.jpg' %}" loading="lazy" decoding="async" alt="3D LED Sign">
       </div>
       <p class="card-title">spa</p>
     </div>
     
     <div class="card-wrapper">
       <div class="card-1">
-        <img src="{% static 'hall.jpg' %}" loading="lazy" alt="Neon Sign">
+        <img src="{% static 'hall.jpg' %}" loading="lazy" decoding="async" alt="Neon Sign">
       </div>
       <p class="card-title">hall</p>
     </div>
     
     <div class="card-wrapper">
       <div class="card-1">
-        <img src="{% static 'bar.jpg' %}" loading="lazy" alt="Metal Cut Letter">
+        <img src="{% static 'bar.jpg' %}" loading="lazy" decoding="async" alt="Metal Cut Letter">
       </div>
       <p class="card-title">Bar</p>
     </div>
     <div class="card-wrapper">
       <div class="card-1">
-        <img src="{% static 'dining.jpg' %}" loading="lazy" alt="Metal Cut Letter">
+        <img src="{% static 'dining.jpg' %}" loading="lazy" decoding="async" alt="Metal Cut Letter">
       </div>
       <p class="card-title">dining</p>
     </div>
@@ -221,7 +221,7 @@
 <section class="about-section">
   <div class="about-image-wrapper">
     <h2 class="about-label">About Us</h2>
-      <img src="{% static 'garden.jpg' %}" alt="About Our Hotel">
+      <img src="{% static 'garden.jpg' %}" loading="lazy" decoding="async" alt="About Our Hotel">
       <h3 class="about-label2">Experience Comfort & Hospitality</h3>
       
       

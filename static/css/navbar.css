@@ -1,20 +1,29 @@
 /* Reset */
+html, body {
+  width: 110vw;
+  min-width: 110vw;
+  max-width: 110vw;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: "Segoe UI", sans-serif;
+  line-height: 1.6;
+}
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 a {
   text-decoration: none;
-  color: white; 
+  color: white;
 }
 
-body {
-    font-family: "Segoe UI", sans-serif;
-    line-height: 1.6;
-    overflow-x: hidden;
-    text-decoration: none;
-}
 .drawer {
     position: fixed;
     top: 0;
