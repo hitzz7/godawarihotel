@@ -93,42 +93,60 @@
         <button class="carousel-btn prev" id="prevBtn">&#10094;</button>
 
         <div class="carousel-track" id="carouselTrack">
-            <div class="card">
-                <img src="{% static 'r4.jpg' %}" loading="lazy" decoding="async" alt="Sign 1">
-                <div class="overlay">Standard Room</div>
-            </div>
-            <div class="card">
-                <img src="{% static 'r3.jpg' %}" loading="lazy" decoding="async" alt="Sign 2">
-                <div class="overlay">Delux Room</div>
-            </div>
-            <div class="card">
-                <img src="{% static 'r2.jpg' %}" loading="lazy" decoding="async" alt="Sign 2">
-                <div class="overlay">Suits</div>
-            </div>
-            <div class="card">
-                <img src="{% static 'r1.jpg' %}" loading="lazy" decoding="async" alt="Sign 2">
-                <div class="overlay">Master Room</div>
-            </div>
-            <div class="card">
-              <img src="{% static 'r3.jpg' %}" loading="lazy" decoding="async" alt="Sign 2">
-              <div class="overlay">Delux Room</div>
-          </div>
-          <div class="card">
-              <img src="{% static 'r2.jpg' %}" loading="lazy" decoding="async" alt="Sign 2">
-              <div class="overlay">Suits</div>
-          </div>
-          <div class="card">
-              <img src="{% static 'r1.jpg' %}" loading="lazy" decoding="async" alt="Sign 2">
-              <div class="overlay">Master Room</div>
-          </div>
-            
-            
-            <!-- Add more cards as needed -->
+            <!-- Cards will be dynamically inserted here -->
         </div>
 
         <button class="carousel-btn next" id="nextBtn">&#10095;</button>
     </div>
 </section>
+<script>
+    // Array of room images and titles
+    const roomData = [
+        {src: "{% static 'r1.jpg' %}", title: "Master Room"},
+        {src: "{% static 'r2.jpg' %}", title: "Suits"},
+        {src: "{% static 'r3.jpg' %}", title: "Delux Room"},
+        {src: "{% static 'r4.jpg' %}", title: "Standard Room"},
+        // You can add more images/titles here if available
+    ];
+
+    // How many cards do you want to show in total? (can exceed roomData.length for more shuffling)
+    const numCards = 7;
+    // Shuffle utility (Fisher-Yates)
+    function shuffle(array) {
+        let a = array.slice();
+        for (let i = a.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [a[i], a[j]] = [a[j], a[i]];
+        }
+        return a;
+    }
+
+    function getRandomCards(data, n) {
+        let cards = [];
+        let roomCount = data.length;
+        let rounds = Math.ceil(n / roomCount);
+        let arr = [];
+        for (let i = 0; i < rounds; i++) {
+            arr = arr.concat(shuffle(data));
+        }
+        return arr.slice(0, n);
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const carouselTrack = document.getElementById('carouselTrack');
+        const randomRooms = getRandomCards(roomData, numCards);
+
+        randomRooms.forEach(room => {
+            const cardDiv = document.createElement('div');
+            cardDiv.className = 'card';
+            cardDiv.innerHTML = `
+                <img src="${room.src}" loading="lazy" decoding="async" alt="${room.title}">
+                <div class="overlay">${room.title}</div>
+            `;
+            carouselTrack.appendChild(cardDiv);
+        });
+    });
+</script>
 <section class="features-section">
     <div class="feature">
       <img src="{% static 'sun.png' %}"  loading="lazy" decoding="async" alt="Swimming Pool">
@@ -169,7 +187,19 @@
     
 
 
-
+  <section class="about-section">
+    <div class="about-wrapper">
+      <img src="{% static 'pool.jpg' %}" alt="About Image" class="about-image">
+      
+      <!-- Overlay Content -->
+      <div class="overlay-content">
+        <h1 class="overlay-title">Welcome to Our Website</h1>
+        <p class="overlay-text">We create amazing websites that help your business grow.</p>
+        <button class="booking-btn">Get Started</button>
+      </div>
+    </div>
+  </section>
+  
 
 <section class="gallery-section">
   <h2 class="gallery-heading">We have every thing you need</h2>
@@ -212,6 +242,44 @@
   
   
 </section>
+<section class="luxury-section">
+  <div class="luxury-container">
+
+    <!-- LEFT CONTENT -->
+    <div class="luxury-left">
+      <span class="subtitle">CURATED COLLECTION</span>
+      <h1 class="luxury-title">
+        GODAWARI<br>
+        FOREST<br>
+        HOTEL
+      </h1>
+      <div class="small-image">
+        <img id="randomSmallImage" src="{% static 'pool.jpg' %}" alt="Random Luxury Architecture">
+      </div>
+    </div>
+
+    <!-- RIGHT CONTENT -->
+    <div class="luxury-right">
+      <div class="main-image">
+        <img id="randomMainImage" src="{% static 'spa.jpg' %}" alt="Random Boutique Beachfront Hotel">
+      </div>
+
+      <div class="luxury-text">
+        <h3>Boutique Beachfront Hotels</h3>
+        <p>
+          Because intimacy always leaves the deepest mark.
+          <br><br>
+          Here, the sea hums in the background and silence becomes the new indulgence.
+          These boutique retreats trade scale for soul — fewer rooms, bigger feelings.
+          Beauty that doesn’t demand attention; it earns it.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
 <section class="sliding-text-section">
   <div class="sliding-text">
       GODAWARI FOREST HOTEL • GODAWARI FOREST HOTEL • GODAWARI FOREST HOTEL
