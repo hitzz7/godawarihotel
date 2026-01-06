@@ -6,7 +6,7 @@
 {% block content %}
 <div class="bg-image">
     
-        <img src="{% static 'pool.jpg' %}" alt="Pool" fetchpriority="high" loading="eager" decoding="async">
+        <img src="{% static 'pool.webp' %}" alt="Pool" fetchpriority="high" loading="eager" decoding="async">
         
     
     <div class="text-overlay">
@@ -102,10 +102,10 @@
 <script>
     // Array of room images and titles
     const roomData = [
-        {src: "{% static 'r1.jpg' %}", title: "Master Room"},
-        {src: "{% static 'r2.jpg' %}", title: "Suits"},
-        {src: "{% static 'r3.jpg' %}", title: "Delux Room"},
-        {src: "{% static 'r4.jpg' %}", title: "Standard Room"},
+        {src: "{% static 'r4.webp' %}", title: "Master Room"},
+        {src: "{% static 'room1.jpg' %}", title: "Suits"},
+        {src: "{% static 'room1.jpg' %}", title: "Delux Room"},
+        {src: "{% static 'r4.webp' %}", title: "Standard Room"},
         // You can add more images/titles here if available
     ];
 
@@ -189,7 +189,7 @@
 
   <section class="about-section">
     <div class="about-wrapper">
-      <img src="{% static 'pool.jpg' %}" alt="About Image" class="about-image">
+      <img src="{% static 'pool.webp' %}" alt="About Image" class="about-image">
       
       <!-- Overlay Content -->
       <div class="overlay-content">
@@ -207,34 +207,34 @@
   <div class="gallery-wrapper">
     <div class="card-wrapper">
       <div class="card-1">
-        <img src="{% static 'pool.jpg' %}" loading="lazy" decoding="async" alt="2D Acrylic Sign">
+        <img src="{% static 'pool.webp' %}" width="320" height="213" loading="lazy" decoding="async" alt="2D Acrylic Sign">
       </div>
       <p class="card-title">pool</p>
     </div>
     
     <div class="card-wrapper">
       <div class="card-1">
-        <img src="{% static 'spa.jpg' %}" loading="lazy" decoding="async" alt="3D LED Sign">
+        <img src="{% static 'spa.webp' %}" width="320" height="213" loading="lazy" decoding="async" alt="3D LED Sign">
       </div>
       <p class="card-title">spa</p>
     </div>
     
     <div class="card-wrapper">
       <div class="card-1">
-        <img src="{% static 'hall.jpg' %}" loading="lazy" decoding="async" alt="Neon Sign">
+        <img src="{% static 'pool.webp' %}" width="320" height="213" loading="lazy" decoding="async" alt="Neon Sign">
       </div>
       <p class="card-title">hall</p>
     </div>
     
     <div class="card-wrapper">
       <div class="card-1">
-        <img src="{% static 'bar.jpg' %}" loading="lazy" decoding="async" alt="Metal Cut Letter">
+        <img src="{% static 'room1.jpg' %}" width="320" height="213" loading="lazy" decoding="async" alt="Metal Cut Letter">
       </div>
       <p class="card-title">Bar</p>
     </div>
     <div class="card-wrapper">
       <div class="card-1">
-        <img src="{% static 'dining.jpg' %}" loading="lazy" decoding="async" alt="Metal Cut Letter">
+        <img src="{% static 'dining.webp' %}" width="320" height="213" loading="lazy" decoding="async" alt="Metal Cut Letter">
       </div>
       <p class="card-title">dining</p>
     </div>
@@ -254,14 +254,14 @@
         HOTEL
       </h1>
       <div class="small-image">
-        <img id="randomSmallImage" src="{% static 'pool.jpg' %}" alt="Random Luxury Architecture">
+        <img id="randomSmallImage" src="{% static 'pool.webp' %}" alt="Random Luxury Architecture">
       </div>
     </div>
 
     <!-- RIGHT CONTENT -->
     <div class="luxury-right">
       <div class="main-image">
-        <img id="randomMainImage" src="{% static 'spa.jpg' %}" alt="Random Boutique Beachfront Hotel">
+        <img id="randomMainImage" src="{% static 'spa.webp' %}" alt="Random Boutique Beachfront Hotel">
       </div>
 
       <div class="luxury-text">
